@@ -1,0 +1,23 @@
+{
+  "name": "k6-tests",
+  "version": "1.0.0",
+  "description": "k6 load testing scripts with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "k6 run dist/initialize.js",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/k6": "^0.52.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {}
+}
