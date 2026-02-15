@@ -12,7 +12,7 @@ export default function(){
         "is status 200": (r) => r.status === 200,
     });
 
-    const res = http.get(url("/@isu002"));
+    const res = http.get(url("/"));
     const doc = parseHTML(res.body as string);
 
     const token = doc.find('input[name="csrf_token"]').first().attr('value');
