@@ -6,8 +6,8 @@ const testImage = open("drink_beer_bin.png", "b");
 
 export default function () {
     const res = http.post(url("/login"), {
-        account_name: "isu002",
-        password: "isu002"
+        account_name: "terra",
+        password: "terraterra"
     });
 
     const doc = parseHTML(res.body as string);

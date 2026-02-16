@@ -5,14 +5,14 @@ import {url} from "./config.ts";
 
 export default function(){
     const login_res = http.post(url("/login"), {
-        account_name: "isu002",
-        password: "isu002"
+        account_name: "terra",
+        password: "terraterra"
     });
     check(login_res, {
         "is status 200": (r) => r.status === 200,
     });
 
-    const res = http.get(url("/"));
+    const res = http.get(url("/@terra"));
     const doc = parseHTML(res.body as string);
 
     const token = doc.find('input[name="csrf_token"]').first().attr('value');
